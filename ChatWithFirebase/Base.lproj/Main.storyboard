@@ -35,6 +35,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="lD3-U4-NLh" kind="show" id="8t3-un-Wa5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -66,12 +69,67 @@
             </objects>
             <point key="canvasLocation" x="413.04347826086962" y="-196.20535714285714"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="h5D-IR-wwV">
+            <objects>
+                <viewController id="lD3-U4-NLh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xpj-GI-YuU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="PWB-4r-TIC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-T5-fjc">
+                                <rect key="frame" x="10" y="103" width="394" height="126"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnT-zs-pzU">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-Eg-6nW">
+                                        <rect key="frame" x="0.0" y="45" width="394" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk8-Qb-Pnp">
+                                        <rect key="frame" x="0.0" y="90" width="394" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68815559150000005" blue="0.70598822829999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="31h-Ww-h9E"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k3k-o0-18j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PWB-4r-TIC" secondAttribute="trailing" id="4TB-kr-DcM"/>
+                            <constraint firstAttribute="bottom" secondItem="PWB-4r-TIC" secondAttribute="bottom" id="5zP-0l-zOh"/>
+                            <constraint firstItem="PWB-4r-TIC" firstAttribute="leading" secondItem="Xpj-GI-YuU" secondAttribute="leading" id="9KI-Mi-iZz"/>
+                            <constraint firstItem="d2b-T5-fjc" firstAttribute="top" secondItem="k3k-o0-18j" secondAttribute="top" constant="15" id="FqD-MH-K6k"/>
+                            <constraint firstItem="PWB-4r-TIC" firstAttribute="top" secondItem="Xpj-GI-YuU" secondAttribute="top" id="GB0-Yi-9wr"/>
+                            <constraint firstItem="k3k-o0-18j" firstAttribute="trailing" secondItem="d2b-T5-fjc" secondAttribute="trailing" constant="10" id="iUR-5m-IEr"/>
+                            <constraint firstItem="d2b-T5-fjc" firstAttribute="leading" secondItem="k3k-o0-18j" secondAttribute="leading" constant="10" id="m0D-TM-h9z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pib-vI-0u0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGw-xm-9FQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214.4927536231885" y="34.151785714285715"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8k0-gT-0cB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rYV-TP-ESW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHL-QD-q5o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BHL-QD-q5o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
