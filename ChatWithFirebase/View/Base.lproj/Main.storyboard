@@ -75,7 +75,7 @@
         <!--Log In-->
         <scene sceneID="5J1-go-aTe">
             <objects>
-                <viewController id="hYv-RT-jeQ" sceneMemberID="viewController">
+                <viewController id="hYv-RT-jeQ" customClass="LoginViewController" customModule="ChatWithFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhe-w5-JST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +103,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="logInPressed:" destination="hYv-RT-jeQ" eventType="touchUpInside" id="pDS-Y2-LmJ"/>
                                             <segue destination="UCb-0Y-e5p" kind="show" id="6be-K1-Ytx"/>
                                         </connections>
                                     </button>
@@ -125,6 +126,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="8NT-Ru-4Jk"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="ZVI-L7-lVE" id="cEh-D3-Opx"/>
+                        <outlet property="passwordTextfield" destination="lM3-cl-PBo" id="Vzv-Ro-aVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHy-q6-ozJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +138,7 @@
         <!--Register-->
         <scene sceneID="h5D-IR-wwV">
             <objects>
-                <viewController id="lD3-U4-NLh" sceneMemberID="viewController">
+                <viewController id="lD3-U4-NLh" customClass="RegisterViewController" customModule="ChatWithFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xpj-GI-YuU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,6 +166,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="registerPressed:" destination="lD3-U4-NLh" eventType="touchUpInside" id="Hw7-iv-hLy"/>
                                             <segue destination="UCb-0Y-e5p" kind="show" id="2zk-Un-5I7"/>
                                         </connections>
                                     </button>
@@ -183,6 +189,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="Pib-vI-0u0"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="BnT-zs-pzU" id="yVV-hQ-Ki4"/>
+                        <outlet property="passwordTextfield" destination="6y5-Eg-6nW" id="QVD-pd-XZL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGw-xm-9FQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +201,7 @@
         <!--Chat-->
         <scene sceneID="Dg2-ah-ocD">
             <objects>
-                <viewController id="UCb-0Y-e5p" sceneMemberID="viewController">
+                <viewController id="UCb-0Y-e5p" customClass="ChatViewController" customModule="ChatWithFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZX-HR-pQT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +222,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="UCb-0Y-e5p" eventType="touchUpInside" id="8Mc-Cg-wnh"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPD-vn-Y36">
                                         <rect key="frame" x="10" y="5" width="307" height="50"/>
@@ -259,12 +272,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="VtM-v5-MTo">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="yVO-R6-Ser"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="yVO-R6-Ser">
+                            <connections>
+                                <action selector="logOutPressed:" destination="UCb-0Y-e5p" id="gXi-Pl-30I"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="messageTableView" destination="42Z-QJ-89Y" id="6nC-hO-SLx"/>
+                        <outlet property="messageTextfield" destination="nPD-vn-Y36" id="GWQ-cL-iUq"/>
+                        <outlet property="sendButton" destination="sej-ee-Ide" id="bgm-Kx-W5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnl-Ww-sjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.9275362318845" y="-222.99107142857142"/>
+            <point key="canvasLocation" x="2610" y="-235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8k0-gT-0cB">
@@ -295,7 +317,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6be-K1-Ytx"/>
+        <segue reference="2zk-Un-5I7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backward.frame.fill" catalog="system" width="128" height="93"/>

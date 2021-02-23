@@ -8,6 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    //Textfields pre-linked with IBOutlets
+    @IBOutlet var emailTextfield: UITextField!
+    @IBOutlet var passwordTextfield: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +19,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logInPressed(_ sender: AnyObject){
+        
     }
-    */
+    
+
+   
 
 }

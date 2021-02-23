@@ -8,11 +8,20 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    //Pre-linked IBOutlets
 
+    @IBOutlet var emailTextfield: UITextField!
+    @IBOutlet var passwordTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func registerPressed(_ sender: AnyObject){
+        
     }
     
 
