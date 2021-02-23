@@ -102,6 +102,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UCb-0Y-e5p" kind="show" id="6be-K1-Ytx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -157,6 +160,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UCb-0Y-e5p" kind="show" id="2zk-Un-5I7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -181,6 +187,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGw-xm-9FQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="34.151785714285715"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Dg2-ah-ocD">
+            <objects>
+                <viewController id="UCb-0Y-e5p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZX-HR-pQT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-tl-h50">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-7l-zmD">
+                                <rect key="frame" x="0.0" y="788" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sej-ee-Ide">
+                                        <rect key="frame" x="327" y="2" width="77" height="56"/>
+                                        <color key="backgroundColor" red="0.0" green="0.29155261700000001" blue="0.47058980360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="whN-Uy-dZ1"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPD-vn-Y36">
+                                        <rect key="frame" x="10" y="5" width="307" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sej-ee-Ide" secondAttribute="trailing" constant="10" id="Ib6-WQ-C3Z"/>
+                                    <constraint firstAttribute="height" constant="60" id="TBT-hv-hn2"/>
+                                    <constraint firstItem="sej-ee-Ide" firstAttribute="leading" secondItem="nPD-vn-Y36" secondAttribute="trailing" constant="10" id="THf-cL-kj2"/>
+                                    <constraint firstAttribute="bottom" secondItem="nPD-vn-Y36" secondAttribute="bottom" constant="5" id="XkD-I2-H6q"/>
+                                    <constraint firstItem="nPD-vn-Y36" firstAttribute="leading" secondItem="YZR-7l-zmD" secondAttribute="leading" constant="10" id="gGf-Q6-eHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="sej-ee-Ide" secondAttribute="bottom" constant="2" id="mpN-tR-XEz"/>
+                                    <constraint firstItem="sej-ee-Ide" firstAttribute="top" secondItem="YZR-7l-zmD" secondAttribute="top" constant="2" id="nIf-jy-p1N"/>
+                                    <constraint firstItem="nPD-vn-Y36" firstAttribute="top" secondItem="YZR-7l-zmD" secondAttribute="top" constant="5" id="xu1-bU-Tau"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="42Z-QJ-89Y">
+                                <rect key="frame" x="0.0" y="145" width="414" height="638"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ETA-VK-L8o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YZR-7l-zmD" firstAttribute="top" secondItem="42Z-QJ-89Y" secondAttribute="bottom" constant="5" id="75c-v5-bp7"/>
+                            <constraint firstItem="ETA-VK-L8o" firstAttribute="bottom" secondItem="YZR-7l-zmD" secondAttribute="bottom" constant="14" id="KKN-18-qRr"/>
+                            <constraint firstItem="YZR-7l-zmD" firstAttribute="leading" secondItem="ETA-VK-L8o" secondAttribute="leading" id="UVl-vp-LXg"/>
+                            <constraint firstItem="42Z-QJ-89Y" firstAttribute="trailing" secondItem="ETA-VK-L8o" secondAttribute="trailing" id="Zqw-xV-tvv"/>
+                            <constraint firstItem="YZR-7l-zmD" firstAttribute="trailing" secondItem="ETA-VK-L8o" secondAttribute="trailing" id="gkt-No-Lj2"/>
+                            <constraint firstItem="42Z-QJ-89Y" firstAttribute="leading" secondItem="ETA-VK-L8o" secondAttribute="leading" id="ngN-rM-M8h"/>
+                            <constraint firstItem="42Z-QJ-89Y" firstAttribute="top" secondItem="ETA-VK-L8o" secondAttribute="top" constant="5" id="wky-UX-P8L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="VtM-v5-MTo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnl-Ww-sjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344.9275362318845" y="-222.99107142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8k0-gT-0cB">
@@ -210,6 +282,9 @@
             <point key="canvasLocation" x="-497.10144927536237" y="-196.20535714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6be-K1-Ytx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backward.frame.fill" catalog="system" width="128" height="93"/>
         <image name="chatBackground" width="634" height="951"/>
