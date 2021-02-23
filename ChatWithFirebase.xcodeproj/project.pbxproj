@@ -17,6 +17,8 @@
 		2C8E9B6A25E52876003E6A6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6925E52876003E6A6C /* LoginViewController.swift */; };
 		2C8E9B6D25E5288C003E6A6C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6C25E5288C003E6A6C /* RegisterViewController.swift */; };
 		2C8E9B7025E528BA003E6A6C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */; };
+		2C8E9B7525E5295A003E6A6C /* CustomMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B7325E5295A003E6A6C /* CustomMessageCellTableViewCell.swift */; };
+		2C8E9B7625E5295A003E6A6C /* CustomMessageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E9B7425E5295A003E6A6C /* CustomMessageCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2C8E9B6925E52876003E6A6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C8E9B6C25E5288C003E6A6C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2C8E9B7325E5295A003E6A6C /* CustomMessageCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCellTableViewCell.swift; sourceTree = "<group>"; };
+		2C8E9B7425E5295A003E6A6C /* CustomMessageCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		2C8E9B6525E52805003E6A6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C8E9B7225E52913003E6A6C /* Custom Cell */,
 				2C8E9B4F25E4FB2D003E6A6C /* Main.storyboard */,
 				2C8E9B5425E4FB30003E6A6C /* LaunchScreen.storyboard */,
 			);
@@ -101,6 +106,15 @@
 				2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C8E9B7225E52913003E6A6C /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C8E9B7325E5295A003E6A6C /* CustomMessageCellTableViewCell.swift */,
+				2C8E9B7425E5295A003E6A6C /* CustomMessageCellTableViewCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +176,7 @@
 			files = (
 				2C8E9B5625E4FB30003E6A6C /* LaunchScreen.storyboard in Resources */,
 				2C8E9B5325E4FB30003E6A6C /* Assets.xcassets in Resources */,
+				2C8E9B7625E5295A003E6A6C /* CustomMessageCellTableViewCell.xib in Resources */,
 				2C8E9B5125E4FB2D003E6A6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +190,7 @@
 			files = (
 				2C8E9B4E25E4FB2D003E6A6C /* StartViewController.swift in Sources */,
 				2C8E9B6125E526F9003E6A6C /* Message.swift in Sources */,
+				2C8E9B7525E5295A003E6A6C /* CustomMessageCellTableViewCell.swift in Sources */,
 				2C8E9B4A25E4FB2D003E6A6C /* AppDelegate.swift in Sources */,
 				2C8E9B7025E528BA003E6A6C /* ChatViewController.swift in Sources */,
 				2C8E9B6D25E5288C003E6A6C /* RegisterViewController.swift in Sources */,
