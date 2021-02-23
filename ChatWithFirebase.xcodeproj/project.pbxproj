@@ -14,6 +14,9 @@
 		2C8E9B5325E4FB30003E6A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E9B5225E4FB30003E6A6C /* Assets.xcassets */; };
 		2C8E9B5625E4FB30003E6A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E9B5425E4FB30003E6A6C /* LaunchScreen.storyboard */; };
 		2C8E9B6125E526F9003E6A6C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6025E526F9003E6A6C /* Message.swift */; };
+		2C8E9B6A25E52876003E6A6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6925E52876003E6A6C /* LoginViewController.swift */; };
+		2C8E9B6D25E5288C003E6A6C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6C25E5288C003E6A6C /* RegisterViewController.swift */; };
+		2C8E9B7025E528BA003E6A6C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2C8E9B5525E4FB30003E6A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C8E9B5725E4FB30003E6A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8E9B6025E526F9003E6A6C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2C8E9B6925E52876003E6A6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C8E9B6C25E5288C003E6A6C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,12 @@
 		2C8E9B4825E4FB2D003E6A6C /* ChatWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				2C8E9B6325E52735003E6A6C /* Model */,
 				2C8E9B4925E4FB2D003E6A6C /* AppDelegate.swift */,
 				2C8E9B4B25E4FB2D003E6A6C /* SceneDelegate.swift */,
-				2C8E9B4D25E4FB2D003E6A6C /* StartViewController.swift */,
-				2C8E9B4F25E4FB2D003E6A6C /* Main.storyboard */,
+				2C8E9B6325E52735003E6A6C /* Model */,
+				2C8E9B6525E52805003E6A6C /* View */,
+				2C8E9B6825E52839003E6A6C /* Controller */,
 				2C8E9B5225E4FB30003E6A6C /* Assets.xcassets */,
-				2C8E9B5425E4FB30003E6A6C /* LaunchScreen.storyboard */,
 				2C8E9B5725E4FB30003E6A6C /* Info.plist */,
 			);
 			path = ChatWithFirebase;
@@ -76,6 +81,26 @@
 				2C8E9B6025E526F9003E6A6C /* Message.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2C8E9B6525E52805003E6A6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8E9B4F25E4FB2D003E6A6C /* Main.storyboard */,
+				2C8E9B5425E4FB30003E6A6C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8E9B6825E52839003E6A6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C8E9B4D25E4FB2D003E6A6C /* StartViewController.swift */,
+				2C8E9B6925E52876003E6A6C /* LoginViewController.swift */,
+				2C8E9B6C25E5288C003E6A6C /* RegisterViewController.swift */,
+				2C8E9B6F25E528BA003E6A6C /* ChatViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +176,9 @@
 				2C8E9B4E25E4FB2D003E6A6C /* StartViewController.swift in Sources */,
 				2C8E9B6125E526F9003E6A6C /* Message.swift in Sources */,
 				2C8E9B4A25E4FB2D003E6A6C /* AppDelegate.swift in Sources */,
+				2C8E9B7025E528BA003E6A6C /* ChatViewController.swift in Sources */,
+				2C8E9B6D25E5288C003E6A6C /* RegisterViewController.swift in Sources */,
+				2C8E9B6A25E52876003E6A6C /* LoginViewController.swift in Sources */,
 				2C8E9B4C25E4FB2D003E6A6C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
