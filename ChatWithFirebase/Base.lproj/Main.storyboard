@@ -258,7 +258,9 @@
                             <constraint firstItem="42Z-QJ-89Y" firstAttribute="top" secondItem="ETA-VK-L8o" secondAttribute="top" constant="5" id="wky-UX-P8L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="VtM-v5-MTo"/>
+                    <navigationItem key="navigationItem" title="Chat" id="VtM-v5-MTo">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="yVO-R6-Ser"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnl-Ww-sjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
